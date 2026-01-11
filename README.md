@@ -49,7 +49,6 @@ ProiectSI/
      /assistant-llm/
        assistant_server.py
        requirements.txt
-  Documentatie_ProiectSI.pdf
 ```
 
 ---
