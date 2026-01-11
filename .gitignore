@@ -1,0 +1,20 @@
+# Eclipse build output
+bin/
+.settings/
+
+# Java compiled
+*.class
+
+# Runtime/log files (nu le urcăm)
+chat-history.jsonl
+Jade/
+*.log
+
+# Python venv/cache
+assistant-llm/.venv/
+assistant-llm/__pycache__/
+assistant-llm/*.pyc
+
+# OS junk
+.DS_Store
+Thumbs.db
