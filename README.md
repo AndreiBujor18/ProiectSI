@@ -147,7 +147,7 @@ Verificare:
 
 ---
 
-## 11) Note despre fișiere generate
+## 10) Note despre fișiere generate
 - `chat-history.jsonl` este generat la rularea proiectului.
 - `assistant-llm/.venv` este generat local.
 
