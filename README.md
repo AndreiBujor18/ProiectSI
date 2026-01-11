@@ -151,3 +151,18 @@ Verificare:
 - `assistant-llm/.venv` este generat local.
 
 ---
+
+![screenshot](rma.png)
+![screenshot](df.png)
+![screenshot](gui1.png)
+![screenshot](gui2.png)
+![screenshot](sniffer.png)
+![screenshot](privat.png)
+![screenshot](broadcast.png)
+![screenshot](assistant.png)
+![screenshot](assistant2.png)
+![screenshot](assistant3.png)
+![screenshot](sniffer_assistant.png)
+![screenshot](logfilet.png)
+![screenshot](shutdownt.png)
+![screenshot](shutdown2.png)
