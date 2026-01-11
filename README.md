@@ -60,8 +60,8 @@ ProiectSI/
 - Java 8+
 - Eclipse IDE (Java Project)
 - JADE adăugat manual în Build Path:
-- `jade.jar`.
-- `jade-src.jar` și `jade-javadocs.jar` pentru IDE
+  - `jade.jar`.
+  - `jade-src.jar` și `jade-javadocs.jar` pentru IDE
 
 > Notă: `jade.jar` nu este inclus în repo. Se adaugă local din Eclipse (Build Path).
 
@@ -87,7 +87,7 @@ ProiectSI/
 
 ## 7) Lansare în execuție (fără Assistant)
 1. Rulezi:
-   - `src/ro/proiectsi/MainLauncher.java` -> `Run As - Java Application`
+   - `src/ro/proiectsi/MainLauncher.java` -> `Run As -> Java Application`
 2. În ferestrele GUI:
    - Connect în ambele (ex. `ana` și `maria`)
    - trimiți mesaje private și/sau broadcast
@@ -99,15 +99,16 @@ ProiectSI/
 ## 8) Assistant LLM (Ollama) - Instalare / Configurare / Rulare
 
 ### 8.1 Ollama + model
-În terminal:
+După ce se instalează, se scrie în terminal:
 ```bash
-ollama list
 ollama pull llama3.1
+ollama list
+
 ```
 
 Test:
 ```bash
-ollama run llama3.1 "Spune salut in romana."
+ollama run llama3.1 "Spune salut in română."
 ```
 
 ### 8.2 Pornește serverul Python (FastAPI)
@@ -126,33 +127,21 @@ Verificare:
 - deschide `http://127.0.0.1:8000/docs`
 
 ### 8.3 Rulează aplicația Java
-- Rulează `MainLauncher.java` din Eclipse
+- Rulează `MainLauncher.java` -> Run As -> Java Application 
 - Conectează-te în GUI
 - Apasă:
   - **Suggest reply**
   - **Summarize chat**
 
-> Dacă serviciul Python/Ollama nu rulează, `AssistantAgent` răspunde cu **fallback**, iar chat-ul rămâne funcțional.
+> În cazul în care serviciul Python/Ollama nu rulează, `AssistantAgent` răspunde cu **fallback**, iar chat-ul rămâne funcțional.
 
 ---
 
-## 9) Troubleshooting
-- **Connect e dezactivat / “Caut server in DF…”**  
-  Așteaptă 1–2 secunde; clientul caută serverul periodic în DF.
-- **Assistant afișează fallback**  
-  Verifică:
-  - `uvicorn` rulează pe `127.0.0.1:8000` (test: `http://127.0.0.1:8000/docs`)
-  - Ollama rulează și modelul există (`ollama list`)
-- **Log-ul nu apare**  
-  Verifică working directory în `Run Configurations` (Eclipse).
-
----
-
-## 10) Demonstrație (scenariu scurt)
+## 9) Demonstrație (flux de utilizare)
 1) Pornește aplicația (MainLauncher)  
-2) Connect: `ana`, `maria`  
+2) Connect: `ana` și `maria`  
 3) Privat: ana -> maria  
-4) Broadcast: maria -> toți ceilalți 
+4) Broadcast: maria -> toți 
 5) Assistant: Suggest + Summary  
 6) Shutdown platform (admin)
 
